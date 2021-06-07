@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Karla&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    line-height: 2;
+}
+
+img {
+    width: 100%;
+}
+
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 5%;
+}
+
+.Nav-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10%;
+}
+
+.Nav-brand {
+    font-family: 'Akaya Kanadaka', cursive;
+    font-size: 1.5rem;
+}
+
+.Nav-links a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.Nav-links a::after {
+    content: '';
+    width: 0;
+    height: 23px;
+    position: absolute;
+    border-bottom: 3px solid red;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+
+.Nav-links a:hover::after {
+    width: 100%;
+}
+
+.Nav-link-toggle {
+    display: none;
+    font-size: 25px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5%;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.hero-caption {
+    width: 70%;
+}
+
+.hero-caption h1 {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 900;
+    padding: 5% 0;
+}
+
+#startup {
+    display: flex;
+    gap: 5%;
+    padding: 5%;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+h5 {
+    text-transform: uppercase;
+    padding: 5% 0;
+}
+
+#assemble {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+
+.assemble-text {
+    padding: 0 5%;
+}
+
+.grey, a {
+    color: grey;
+}
+
+#company {
+    text-align: center;
+    padding: 5% 0;
+    letter-spacing: 30px;
+    color: grey;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5%;
+    align-items: center;
+    padding: 5%;
+    background-color: black;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    text-transform: uppercase;   
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer input {
+    width: 100%;
+    border: 0;
+    border-radius: 20px;
+    padding: 3% 5%;
+    position: relative;
+    margin-top: 5%;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 20px;
+  padding: 3% 0;
+  margin: 5% 0;
+  cursor: pointer;  
+  font-weight: 900;
+}
+
+button:hover {
+    background-color: cornflowerblue;
+    color: black;
+}
+
+::placeholder {
+    padding-left: 5%;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.icons {
+    letter-spacing: 5px;
+}
+
+.icons a:hover {
+    color: cornflowerblue;
+}
+
+.attribution {
+    text-align: center;
+    background-color: rgba(15, 13, 13, 0.918);
+    color: white;
+}
+
+
+@media only screen and (max-width: 768px ) {
+    body {
+        text-align: center;
+        width: 100%;
+    }
+
+    .Nav-items,
+    .Navbar {
+        flex-direction:column;
+        align-items: flex-start;
+    }
+
+    .Nav-items {
+        display: none;
+        padding: 5% 0;
+    }
+
+    .Navbar_toggleShow {
+        display: flex;
+    }
+
+    .Nav-links {
+        display: block;
+        padding: 10% 0;
+    }
+    
+    .Nav-link-toggle {
+        align-self: flex-end;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+        top: 2%;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-caption {
+        width: 100%;
+        padding: 5% 5%;
+    }
+
+    .hero-caption h1 {
+        font-size: 1.5rem;
+    }
+    #startup {
+        flex-direction: column;
+    }
+
+    .startup-grid {
+        padding: 8% 5%;
+    }
+
+    #assemble {
+        flex-direction: column;
+        padding: 8% 5%;
+    }
+
+    .assemble-text {
+        padding: 20px 0;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    #company {
+        font-size: 14px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 8% 5%;
+    }
+
+    .attribution {
+        padding: 0 5%;
+    }
+}
